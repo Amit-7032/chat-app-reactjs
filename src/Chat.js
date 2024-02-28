@@ -10,8 +10,10 @@ const Chat = ({ messages }) => {
           <Message key={index} text={message.text} sender={message.sender} />
         ))}
       </div>
-      <input type="text" placeholder="Type your message..." />
-      <button>Send</button>
+      <div>
+        <input type="text" placeholder="Type your message..." />
+        <button>Send</button>
+      </div>
     </div>
   );
 };
