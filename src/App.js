@@ -74,9 +74,12 @@ const App = () => {
 
   return (
     <>
-      <div className="container">
-        <Sidebar contacts={contacts} />
-        <Chat messages={messages} />
+     <div className="app">
+        <Navbar/>
+        <div className="container">
+          <Sidebar contacts={contacts} />
+          <Chat messages={messages} />
+        </div>
       </div>
     </>
   );
