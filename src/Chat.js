@@ -9,7 +9,8 @@ const Chat = ({ messages }) => {
     setInputField(e.target.value);
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
     if (inputField.trim() !== '') {
       setChatMessage([...chatMessage, inputField]);
       setInputField('');
@@ -21,15 +22,15 @@ const Chat = ({ messages }) => {
       <div className="messages">
         {chatMessage.map((message, index) => (
           // <Message key={index} text={message.text} sender={message.sender} />
-          <div key={index}>
-            {message}
-          </div>
+        <div className="chat-message">
+          <p>{message}</p>
+        </div>
         ))}
       </div>
-      <div>
+      <form onSubmit={handleSubmit}>
         <textarea type="text" placeholder="Type your message..." rows={5} value={inputField} onChange={handleChange} />
-        <button onClick={handleSubmit}>Send</button>
-      </div>
+        <button type='submit'>Send</button>
+      </form>
     </div>
   );
 };

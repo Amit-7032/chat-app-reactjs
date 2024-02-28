@@ -53,6 +53,11 @@ body {
   padding-left: 30px;
 }
 
+.chat-message {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
 .messages {
   flex: 1;
   padding: 20px;
