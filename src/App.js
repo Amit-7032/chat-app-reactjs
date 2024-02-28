@@ -1,25 +1,85 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Sidebar from "./Sidebar";
+import Chat from "./Chat";
+import "./App.css";
+import Navbar from "./Navbar";
 
-function App() {
+const App = () => {
+  const contacts = [
+    "Contact 1",
+    "Contact 2",
+    "Contact 3",
+    "Contact 4",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+    "Contact 5",
+  ];
+  const messages = [
+    { sender: "Sender", text: "Message 1" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+    { sender: "Receiver", text: "Message 2" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <Sidebar contacts={contacts} />
+        <Chat messages={messages} />
+      </div>
+    </>
   );
-}
+};
 
 export default App;
